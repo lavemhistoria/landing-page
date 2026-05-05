@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lá vem história!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fffef2;
+      color: #124e20;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ────────────────────────────────────── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── LOGO ──────────────────────────────────────── */
+    .logo {
+      height: 32px;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* ── TEXT BLOCK ────────────────────────────────── */
+    .text-block {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 517px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 1.18;
+      color: #124e20;
+      font-variation-settings: 'SOFT' 0, 'WONK' 1;
+      text-align: left;
+      width: 100%;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      line-height: 20px;
+      color: #124e20;
+      text-align: center;
+    }
+
+    /* ── EM BREVE ──────────────────────────────────── */
+    .em-breve {
+      margin-top: 52px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #124e20;
+    }
+
+    /* ── PHOTO CLUSTER ─────────────────────────────── */
+    /* Fixed-width wrapper, centered by margin: auto */
+    .photos-container {
+      position: relative;
+      width: 600px;
+      height: 680px;
+      margin: 48px auto 0;
+      flex-shrink: 0;
+    }
+
+    .photo {
+      position: absolute;
+      width: 375px;
+      box-shadow:
+        0px 100px 80px rgba(0,0,0,.07),
+        0px 41.8px 33.4px rgba(0,0,0,.05),
+        0px 22.3px 17.9px rgba(0,0,0,.04),
+        0px 12.5px 10px  rgba(0,0,0,.04),
+        0px 6.65px 5.32px rgba(0,0,0,.03),
+        0px 2.77px 2.21px rgba(0,0,0,.02);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+    }
+
+    /* Pixel offsets match Figma cluster (photos span ~558px wide, centred) */
+    .photo-1 { left:  37px; top:   0;   transform: rotate(-3.67deg); z-index: 1; }
+    .photo-2 { left: 169px; top:  64px; transform: rotate( 1.41deg); z-index: 3; }
+    .photo-3 { left:   0;   top: 116px; transform: rotate(-4.92deg); z-index: 2; }
+
+    /* ── EMAIL (bottom right) ──────────────────────── */
+    .email {
+      position: fixed;
+      bottom: 32px;
+      right: 48px;
+      font-size: 14px;
+      color: #124e20;
+      text-decoration: none;
+    }
+    .email:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+    @media (max-width: 640px) {
+      .page { padding: 36px 20px 0; }
+
+      .text-block { margin-top: 40px; }
+
+      .headline { font-size: 26px; }
+
+      .photos-container { width: 340px; height: 500px; }
+
+      .photo { width: 260px; }
+      .photo-1 { left: 25px; }
+      .photo-2 { left: 95px; top: 50px; }
+      .photo-3 { left:  0;   top: 90px; }
+
+      .email {
+        position: static;
+        display: block;
+        text-align: center;
+        padding: 32px 0 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Logo -->
+    <img
+      class="logo"
+      src="assets/logo.svg"
+      alt="Lá vem história!"
+    />
+
+    <!-- Headline + subtitle -->
+    <div class="text-block">
+      <h1 class="headline">
+        Histórias de família se perdem.<br />
+        Até que você decide guardá-las.
+      </h1>
+      <p class="subtitle">
+        Responda perguntas guiadas sobre a sua vida em forma de texto, áudio e imagens e transforme suas respostas em um livro para as próximas gerações.
+      </p>
+    </div>
+
+    <!-- Em breve -->
+    <p class="em-breve">Em breve.</p>
+
+    <!-- Photos -->
+    <div class="photos-container" aria-hidden="true">
+      <div class="photo photo-1">
+        <img src="assets/photo1.jpg" alt="" />
+      </div>
+      <div class="photo photo-2">
+        <img src="assets/photo2.jpg" alt="" />
+      </div>
+      <div class="photo photo-3">
+        <img src="assets/photo3.jpg" alt="" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Email fixed bottom-right -->
+  <a class="email" href="mailto:oi@lavemhistoria.com.br">oi@lavemhistoria.com.br</a>
+
+</body>
+</html>
