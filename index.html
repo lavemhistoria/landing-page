@@ -1,205 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lá vem história!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: #fffef2;
-      color: #124e20;
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── LAYOUT ─────────────────────────────────────── */
-    html, body { height: 100%; }
-
-    .page {
-      height: 100vh;
-      display: flex;
-      align-items: stretch;
-      gap: 49px;
-      padding: 31px 0 31px 39px;
-      overflow: hidden;
-    }
-
-    /* ── LEFT COLUMN ────────────────────────────────── */
-    .left {
-      flex-shrink: 0;
-      width: 517px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    /* ── LOGO ───────────────────────────────────────── */
-    .logo {
-      width: 72px;
-      height: 47px;
-      display: block;
-      flex-shrink: 0;
-    }
-
-    /* ── TEXT + BUTTON BLOCK ────────────────────────── */
-    .content {
-      display: flex;
-      flex-direction: column;
-      gap: 33px;
-      align-items: flex-start;
-      width: 100%;
-    }
-
-    .text-block {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      align-items: flex-start;
-      width: 100%;
-    }
-
-    .headline {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 34px;
-      line-height: normal;
-      color: #124e20;
-      font-variation-settings: 'SOFT' 0, 'WONK' 1;
-      width: 100%;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      line-height: 20px;
-      color: #124e20;
-      width: 100%;
-    }
-
-    /* ── BUTTON ─────────────────────────────────────── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      padding: 0 16px;
-      border: 1px solid #dee4df;
-      border-radius: 20px;
-      background: transparent;
-      cursor: default;
-      text-decoration: none;
-    }
-
-    .btn span {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #0e5030;
-      letter-spacing: -0.28px;
-      white-space: nowrap;
-      padding: 0 4px;
-    }
-
-    /* ── EMAIL ──────────────────────────────────────── */
-    .email {
-      font-size: 13px;
-      line-height: 20px;
-      color: #124e20;
-      text-decoration: none;
-    }
-    .email:hover { text-decoration: underline; }
-
-    /* ── BOOK IMAGE ─────────────────────────────────── */
-    .book-wrap {
-      flex: 1;
-      min-width: 0;
-      overflow: hidden;
-    }
-
-    .book-wrap img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      pointer-events: none;
-    }
-
-    /* ── RESPONSIVE ─────────────────────────────────── */
-    @media (max-width: 900px) {
-      html, body { height: auto; }
-
-      .page {
-        height: auto;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 32px 24px 0;
-        gap: 40px;
-      }
-
-      .left {
-        width: 100%;
-        gap: 40px;
-        justify-content: flex-start;
-        padding-bottom: 0;
-      }
-
-      .headline { font-size: 26px; }
-
-      .book-wrap {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 3;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lá Vem História - Guarde suas histórias de família</title>
+    <meta name="description" content="Responda perguntas guiadas sobre a sua vida e transforme suas respostas em um livro para as próximas gerações.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
+    <main class="landing-container">
+        <!-- Left Section -->
+        <section class="content-left">
+            <div class="logo-container">
+                <img src="logo.png" alt="Lá Vem História" class="logo-img">
+            </div>
 
-    <!-- Left column -->
-    <div class="left">
+            <div class="hero-text">
+                <div class="text-group">
+                    <h1 class="headline">
+                        Histórias de família se perdem.<br>
+                        Até que você decide guardá-las.
+                    </h1>
+                    <p class="subheadline">
+                        Responda perguntas guiadas sobre a sua vida e transforme suas respostas em um livro para as próximas gerações.
+                    </p>
+                </div>
+                
+                <div class="button-container">
+                    <button class="btn-secondary">Em breve</button>
+                </div>
+            </div>
 
-      <!-- Logo -->
-      <img
-        class="logo"
-        src="assets/logo.svg"
-        alt="Lá vem história!"
-      />
+            <div class="contact-footer">
+                <p>oi@lavemhistoria.com.br</p>
+            </div>
+        </section>
 
-      <!-- Headline + subtitle + button -->
-      <div class="content">
-        <div class="text-block">
-          <h1 class="headline">
-            Histórias de família se perdem.<br />
-            Até que você decide guardá-las.
-          </h1>
-          <p class="subtitle">
-            Responda perguntas guiadas sobre a sua vida e transforme suas respostas em um livro para as próximas gerações.
-          </p>
-        </div>
-        <div class="btn" role="status" aria-label="Em breve">
-          <span>Em breve</span>
-        </div>
-      </div>
+        <!-- Right Section -->
+        <section class="content-right">
+            <div class="image-wrapper">
+                <img class="main-image" src="http://localhost:3845/assets/07245e917c9f35de1eecb15effd16ac0c197f605.png" alt="Mãos segurando um livro de memórias">
+                <img class="overlay-image" src="http://localhost:3845/assets/abf274556400a3b38a16dcabad9c50a0ac671e94.png" alt="" aria-hidden="true">
+            </div>
+        </section>
+    </main>
 
-      <!-- Email -->
-      <a class="email" href="mailto:oi@lavemhistoria.com.br">oi@lavemhistoria.com.br</a>
-
-    </div>
-
-    <!-- Right column: book photo -->
-    <div class="book-wrap">
-      <img src="assets/handbook.png" alt="Livro de memórias de família" />
-    </div>
-
-  </div>
+    <script src="main.js"></script>
 </body>
 </html>
